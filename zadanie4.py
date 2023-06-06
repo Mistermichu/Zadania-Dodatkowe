@@ -22,7 +22,6 @@ else:
     decimal_part = str(decimal_part)
     decimal_part = decimal_part[2:]
     decimal_part = int(decimal_part)
-    print(decimal_part)
     bin_number = bin(int(user_number))[2:]
     bin_decimal_part = bin(decimal_part)[2:]
     bin_number = bin_number + "." + bin_decimal_part
