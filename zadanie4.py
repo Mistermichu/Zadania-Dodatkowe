@@ -18,11 +18,12 @@ if isinstance(user_number, int):
     bin_number = bin(user_number)[2:]
     print(bin_number)
 else:
-    decimal_part = (user_number - int(user_number))
-    decimal_part = str(decimal_part)
-    decimal_part = decimal_part[2:]
-    decimal_part = int(decimal_part)
-    bin_number = bin(int(user_number))[2:]
-    bin_decimal_part = bin(decimal_part)[2:]
-    bin_number = bin_number + "." + bin_decimal_part
+    string_number = str(user_number)
+    decimal_index = string_number.index(".")
+    user_number = int(user_number)
+    decimal_number = string_number[(decimal_index + 1):]
+    decimal_number = int(decimal_number)
+    bin_number = bin(user_number)[2:]
+    bin_decimal_number = bin(decimal_number)[2:]
+    bin_number = bin_number + "." + bin_decimal_number
     print(bin_number)
